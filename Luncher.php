@@ -813,8 +813,8 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => $pmembersiddd[1
     		}
     	if($text == "/unban"){
     	$txttt = file_get_contents('banlist.txt');
-		$banidd= explode("\n",$txttt);
-	if (in_array($rpto,$banidd)) {
+		$banidd= explode("\n",$txttt);	
+if (in_array($rpto,$banidd)) {
 		$adddd = file_get_contents('banlist.txt');
 		$adddd = str_replace($rpto,"",$adddd);
 		$adddd = preg_replace("/(^[\r\n]*|[\r\n]+)[\s\t]*[\r\n]+/", "", $adddd);
